@@ -1,4 +1,17 @@
 {
+"name": "ahj-media",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"scripts": {
+  "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+  "start": "node your-script.js",
+  "lint": "eslint .",
+  "test": "jest --testPathPattern=./src/",
+  "coverage": "jest --coverage",
+  "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+  "doc": "jsdoc -c jsdoc.conf.json"
+},
   "devDependencies": {
     "eslint": "^8.33.0",
     "eslint-plugin-react": "^7.32.2",
