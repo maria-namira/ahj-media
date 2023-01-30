@@ -1,0 +1,153 @@
+@import "vars.css";
+@import "mixins.css";
+@import "null.css";
+@import "popup.css";
+
+.d_none {
+  display: none;
+}
+
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg1.jpg");
+  // background-color: $neutral-lightex;
+  font-size: 1.3rem;
+  padding: 0 20px 60px;
+}
+
+.timeline {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  // background-color: $neutral-lightex;
+  padding: 1em;
+  // border: 1px solid #000;
+  overflow: auto;
+  // box-shadow: $b-sh-base;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  &__item {
+    padding: 1em;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: $b_sh-light;
+    &:nth-child(n + 2) {
+      margin-top: 1em;
+    }
+    .timeline-item__data {
+      text-align: right;
+    }
+    .timeline-item__content {
+      margin-top: 0.5em;
+      // text-align: center;
+      overflow-wrap: break-word;
+    }
+    .timeline-item__geo {
+      margin-top: 0.5em;
+      .geo__icon {
+        margin-left: 1em;
+        align-items: center;
+        .geo-icon__svg {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          margin-bottom: -3px;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  width: 60%;
+  position: fixed;
+  bottom: 20px;
+  background-color: #fff;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0 1em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: $b-sh-base;
+  &__actions {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__preview-video {
+    position: absolute;
+    width: 100%;
+    // height: 700px;
+    bottom: 45px;
+  }
+  &__record-btnOK,
+  &__record-btnCancel,
+  &__camera,
+  &__micro {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: -7px;
+    cursor: pointer;
+  }
+  &__record-btnOK,
+  &__timer,
+  &__record-btnCancel {
+    position: absolute;
+  }
+  &__timer {
+    display: inline-block;
+    margin-left: 1em;
+    padding: 11px 0;
+    right: 45px;
+    bottom: 0;
+  }
+  &__record-btnOK {
+    background-image: url('../images/checkbox.svg');
+    border: 1px solid #000;
+    border-radius: 50%;
+    right: 120px;
+    bottom: 14px;
+  }
+  &__record-btnCancel {
+    background-image: url('../images/x.svg');
+    border: 1px solid #000;
+    border-radius: 50%;
+    right: 0;
+    bottom: 14px;
+  }
+  &__camera {
+    background-image: url('../images/video.svg');
+  }
+  &__micro {
+    background-image: url('../images/mic.svg');
+  }
+  &__input {
+    flex: 1 0;
+    padding: 0.5em 0;
+    font-size: inherit;
+  }
+}
+
+.red::placeholder {
+  color: red;
+}
