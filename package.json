@@ -5,6 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "watch": "webpack --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "clean": "rm dist/bundle.js",
+    "start": "react-scripts start",
+     "build-prod": "parcel build src/index.html",
+     "dev": "webpack",
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "lint": "eslint .",
     "test": "jest --testPathPattern=./src/",
