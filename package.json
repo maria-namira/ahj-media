@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "cli": "^1.0.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
     "packagename": "^2.0.1"
   },
   "repository": {
