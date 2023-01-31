@@ -1,20 +1,37 @@
 {
-"name": "ahj-media",
-"version": "1.0.0",
-"description": "",
-"main": "index.js",
-"scripts": {
-  "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-  "start": "node your-script.js",
-  "lint": "eslint .",
-  "test": "jest --testPathPattern=./src/",
-  "coverage": "jest --coverage",
-  "e2e": "jest --testPathPattern=./e2e/ --runInBand",
-  "doc": "jsdoc -c jsdoc.conf.json"
-},
+  "name": "ahj-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "start": "node your-script.js",
+    "lint": "eslint .",
+    "test": "jest --testPathPattern=./src/",
+    "coverage": "jest --coverage",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+    "doc": "jsdoc -c jsdoc.conf.json"
+  },
   "devDependencies": {
+    "dependencies": "^0.0.1",
     "eslint": "^8.33.0",
     "eslint-plugin-react": "^7.32.2",
+    "here": "^0.0.2",
+    "listed": "^0.3.1",
     "webpack": "^5.75.0"
-  }
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "packagename": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maria-namira/ahj-media.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maria-namira/ahj-media/issues"
+  },
+  "homepage": "https://github.com/maria-namira/ahj-media#readme"
 }
